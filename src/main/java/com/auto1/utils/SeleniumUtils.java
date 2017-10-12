@@ -8,14 +8,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class SeleniumUtils {
     private static WebDriver driver;
 
-    public static WebDriver getDriver() {
-        return driver;
-    }
-
-    public static void setDriver(WebDriver driver) {
-        SeleniumUtils.driver = driver;
-    }
-
     public static void waitUntilElementIsReload(WebDriver newDriver, WebElement element) {
         WebDriverWait wait = new WebDriverWait(newDriver, 20);
         wait.until(ExpectedConditions.stalenessOf(element));
