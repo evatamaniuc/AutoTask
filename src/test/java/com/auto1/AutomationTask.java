@@ -27,7 +27,7 @@ public class AutomationTask extends WebDriverConfig{
             Car car = cars.get(i);
             assertTrue(!car.getCarNameData().getText().isEmpty(), "Car " + i + " not contains " + filterData);
             assertTrue(car.getCarNameData().getText().contains(filterData), "Car " + i + " not contains " + filterData);
-            //assertTrue(car.getCarImageData().isDisplayed(), "Car " + i + " image is not displayed");
+            assertTrue(car.getCarImageData().isDisplayed(), "Car " + i + " image is not displayed");
             assertTrue(car.getCarImageData().getAttribute("src").contains(".jpeg"), "Car " + i + " image is not jpeg");
             assertTrue(!car.getStockNumberData().getText().isEmpty(), "Car " + i + " stock number is empty");
             assertTrue(!car.getMileageData().getText().isEmpty(), "Car " + i + " mileage is empty");
